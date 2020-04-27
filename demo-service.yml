@@ -1,0 +1,6 @@
+server:
+  port: 80
+
+demo:
+  host: 47.110.12.27
+  port: 2857

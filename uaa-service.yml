@@ -1,0 +1,6 @@
+server:
+  port: 80
+
+membership:
+  maxFailedPasswordCount: 5
+  lockoutTimeLength: 30000

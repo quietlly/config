@@ -1,0 +1,6 @@
+jwt:
+  credential: Bearer
+  header: Authorization
+  secret: 111111
+  expiration: 86400
+  refreshExpiration: 86400

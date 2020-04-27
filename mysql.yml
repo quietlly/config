@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    username: root
+    password: Szvoc001
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.110.12.27:3306/wbs?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      pool-name: WBS-MYSQL-HIKARI
+      connection-test-query: SELECT 1
+      minimum-idle: 2
+      maximum-pool-size: 10
+      idle-timeout: 10000
+      max-lifetime: 20000
+      connection-timeout: 3000

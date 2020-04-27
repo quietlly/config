@@ -1,0 +1,4 @@
+logging:
+  file: applogs/springapp.log
+  level:
+    root: info

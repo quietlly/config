@@ -1,0 +1,45 @@
+server:
+  port: 80
+  
+#phoenix
+phoenix:
+  enable: true
+  url: jdbc:phoenix:114.55.242.218,47.110.127.196,47.110.12.27:2181
+  type: com.alibaba.druid.pool.DruidDataSource
+  driver-class-name: org.apache.phoenix.jdbc.PhoenixDriver
+  username:
+  password:
+  default-auto-commit: true
+
+spring:
+  cloud:
+    stream:
+      bindings:
+        shop_output:
+          destination: db_topic
+          contentType: application/json
+        buddy_output:
+          destination: buddy_topic
+          contentType: application/json
+        distribution_output:
+          destination: distribution_topic
+          contentType: application/json
+      kafka:
+        bindings:
+          buddy_output:
+            consumer:
+              autoCommitOffset: false
+          shop_output:
+            consumer:
+              autoCommitOffset: false
+logging:
+  level:
+    net.szvoc.wbs.service.message.domain.repository: debug    
+    
+elasticsearch:
+  nodes: voctest1:9200,voctest2:9200,voctest3:9200
+
+management:
+  health:
+    elasticsearch:
+      enabled: false

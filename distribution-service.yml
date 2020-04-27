@@ -1,0 +1,19 @@
+server:
+  port: 80
+
+spring:
+  cloud:
+    stream:
+      bindings:
+        distribution_input:
+          destination: distribution_topic
+          contentType: application/json
+        distribution_output:
+          destination: distribution_topic
+          contentType: application/json
+        dlq_output:
+          destination: dlq_output
+          contentType: application/json
+        device_status:
+          destination: device_status_topic #设备转态
+          contentType: application/json

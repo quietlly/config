@@ -1,0 +1,22 @@
+server:
+  port: 80
+  
+spring:
+   servlet:
+      multipart:
+         max-request-size: 100MB 
+         max-file-size: 20MB 
+
+fdfs:
+   so-timeout: 1500
+   connect-timeout: 600 
+   thumb-image:   
+      width: 150
+      height: 150
+   tracker-list:  
+    - 114.55.242.218:22122
+    - 47.110.127.196:22122
+    - 47.110.12.27:22122
+
+dfs:
+ nginx-server: http://114.55.242.218
